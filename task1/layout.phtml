@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Hometask 7</title>
+</head>
+<body>
+	<h1>Devionoty</h1><br>
+	<h3>Урок 28 завдання 6</h3><br>
+	Создать форму, которая содержит поля name, email, phone. Задать скрипт, который выведет на экран отправленные данные - $_POST или $_GET (в зависимости от свойств формы).<br>
+	<b><?=$message?></b>
+	<form method="post">
+		<input type="text" name="name" placeholder="Ваше ім'я: "
+		value="<?=requestPost('name')?>"><br>
+		<input type="email" name="email" placeholder="Email: "
+		value="<?=requestPost('email')?>"><br>
+		<input type="text" name="phone" placeholder="Ваш телефон: "
+		value="<?=requestPost('phone')?>"><br>
+		<input type="submit" name="submit" value="Надіслати"><br>
+	</form>
+</body>
+</html>
