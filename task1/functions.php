@@ -1,6 +1,6 @@
 <?php
 function formIsValid() {
-	return !empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email']);
+	return strlen(($_POST['t1'])) > 0 && strlen(($_POST['t2'])) > 0;
 }
 function redirect($to) {
 	header("Location: {$to}");
@@ -17,4 +17,15 @@ function requestGet($value) {
 		return $_GET[$value];
 	}
 	return null;
+}
+function getCommonWords() {
+	$a = explode(" ", $_POST['t1']);
+	$b = explode(" ", $_POST['t2']);
+	$c = [];
+	foreach ($a as $k) {
+		foreach ($b as $j) {
+			$k == $j ? array_push($c, $k) : null;
+		}
+	}
+	return $c;
 }
