@@ -21,11 +21,7 @@ function requestGet($value) {
 function getCommonWords() {
 	$a = explode(" ", $_POST['t1']);
 	$b = explode(" ", $_POST['t2']);
-	$c = [];
-	foreach ($a as $k) {
-		foreach ($b as $j) {
-			$k == $j ? array_push($c, $k) : null;
-		}
-	}
+	$c = array();
+	$c = array_intersect($a, $b);
 	return $c;
 }

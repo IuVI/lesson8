@@ -4,10 +4,10 @@ $message = requestGet('message');
 if ($_POST) {
 	if (formIsValid()) {
 		$message =  'Форму успішно надіслано';
-		$comwords = getCommonWords();
-		redirect('/hometask8/task1?message=' . $message ."&comwords=" .serialize($comwords));
+		$b = serialize(lentop());
+		redirect('/hometask8/task2?message=' .$message ."&b=" .$b);
 	}
 	$message = "Form is not valid";
 }
-$comwords = unserialize(requestGet('comwords'));
+$b = unserialize(requestGet('b'));
 include 'layout.phtml';
