@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Hometask 8</title>
+</head>
+<body>
+	<h1>Заняття 8</h1><br>
+	<h3>Завдання 10</h3><br>
+	Написать функцию, которая считает количество уникальных слов в тексте. Слова разделяются пробелами. Текст должен вводиться с формы.<br> Взагалі можна використати функцію array_count_values, але я так розумію, що сенс навчання полягає в тому, щоб показати, який я класний велосипедист, тому...<hr>
+	<b><?=$message?></b>
+	<form method = "post">
+		<textarea name = "text" cols = "25" maxlength = '255' rows = '3'></textarea>
+		<input type="submit" name="submit" value = "Надіслати"/>
+	</form><br>
+	<?php echo "Кількість унікальних слів: " .requestGet('ba');?>
+</body>
+</html>
