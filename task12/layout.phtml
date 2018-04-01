@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Hometask 8</title>
+</head>
+<body>
+	<h1>Заняття 8</h1><br>
+	<h3>Завдання 12</h3><br>
+	Написать функцию, которая в качестве аргумента принимает строку, и форматирует ее таким образом, что предложения идут в обратном порядке.<br><hr>
+	<b><?=$message?></b>
+	<form method = "post">
+		<textarea name = "text" cols = "25" maxlength = '255' rows = '3'></textarea>
+		<input type="submit" name="submit" value = "Надіслати"/>
+	</form><br>
+	<?php echo "Відформатований текст: " .requestGet('ba');?>
+</body>
+</html>
