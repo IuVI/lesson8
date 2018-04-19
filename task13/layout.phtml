@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Hometask 8</title>
+</head>
+<body>
+	<h1>Заняття 8</h1><br>
+	<h3>Завдання 13</h3><br>
+	Подсчитайте, сколько раз каждый фрукт встречается в этой строке. Выведите в виде списка в порядке уменьшения количества:<br>
+	<?php echo $text;?><hr>
+	<?php
+		$cnt= (countwrds($text));
+		$i = 0;
+		foreach ($cnt as $key => $val) {
+			$i++;
+			echo $i ." " .$key ." " .$val ."<br>";
+		}
+	?>
+</body>
+</html>
