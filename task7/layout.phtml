@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Hometask 8</title>
+</head>
+<body>
+	<h1>Заняття 8</h1><br>
+	<h3>Завдання 7</h3><br>
+	Создать гостевую книгу, где любой человек может оставить комментарий в текстовом поле и добавить его. Все добавленные комментарии выводятся над текстовым полем. Реализовать проверку на наличие в тексте запрещенных слов, матов. При наличии таких слов - выводить сообщение "Некорректный комментарий". Реализовать удаление из комментария всех тегов, кроме тега &lt;b&gt;.<br><hr>
+	<b><?=$message?></b>
+	<form method = "post">
+		<input type="text" name="login" placeholder = "Login"/><br>
+		<input type="email" name="email" placeholder = "Your email"/><br>
+		<textarea name = "message" cols = "25" maxlength = '255' rows = '3' placeholder = "Повідомлення..."></textarea><br>
+		<input type="submit" name="submit" value = "Надіслати"/>
+	</form><hr>
+	<h2>Comments</h2>
+	<?php foreach ($comments as $comment) : ?>
+		<div name = 'comment'>
+			<h4><?=$comment['name']?></h4>
+			<a href = "?action=delete&amp;id=<?=$comment['id']?>">Delete</a><br>
+			<?=$comment['message']?><br>
+			<i><?=$comment['created']?></i>
+		</div>
+	<?php endforeach; ?>
+</body>
+</html>
